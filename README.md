@@ -26,13 +26,12 @@ The target machine IP address was identified using:
 ```bash
 ip a
 ```
-
 Target IP:
 
 ```
 192.168.56.102
 ```
-
+![Ip Address](./images/ip.png)
 ---
 
 ## 🔎 Step 2: Scan for Open Ports
@@ -54,7 +53,7 @@ nmap -sV -sC -oN web-scan.txt 192.168.56.102
 
 - Port 80 (HTTP) was found open  
 - Apache web server detected  
-
+![Port 80](./images/port80.png)
 ---
 
 ## 🌐 Step 3: Access Web Application
@@ -66,7 +65,7 @@ http://192.168.56.102
 ```
 
 Selected the DVWA application from the webpage.
-
+![DVWA](./images/dvwa.png)
 ---
 
 ## 🔐 Step 4: Login to DVWA
@@ -88,7 +87,7 @@ Password: password
 ```
 Low
 ```
-
+![DVWA Sec Page](./images/dvwasec.png)
 ---
 
 ## 💥 Step 6: SQL Injection Testing
@@ -100,7 +99,7 @@ Low
 ```
 
 - Returned a single user (expected behaviour)
-
+![Expected input](./images/SQL.png)
 ---
 
 ### ❌ Malicious Input
@@ -115,7 +114,7 @@ Low
 
 - Multiple users were returned instead of one  
 - This confirms that the application is vulnerable to SQL Injection  
-
+![Malicious Input](./images/SQL2.png)
 ---
 
 ## 🧠 Explanation (Simple)
